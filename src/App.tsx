@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import './App.css'
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
     const url = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
     const response = await fetch(url);
     const result = await response.json();
-    console.log(result); //api data here
+    console.log(result);
     const toArray: any = [];
     toArray.push(result, ...pokemonData);
     setPokemonData(toArray);
